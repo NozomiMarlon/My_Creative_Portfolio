@@ -1,0 +1,35 @@
+.about-me__container {
+  background-color: var(--dark-violet);
+  background-image: url(../assets/wave02.svg);
+  background-repeat: no-repeat;
+  background-position:bottom;
+  padding: 0 10% 13% 10%;
+  box-sizing: border-box;
+  font-family: var(--nunito);
+  cursor: default;
+  color: var(--white);
+  height: 100%;
+}
+
+.about-me__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.about-me__tittle {
+  text-align: center;
+  color: var(--dark-pink);
+  font-weight: 700;
+  font-size: 1.525rem;
+  padding-bottom: 3%;
+}
+
+.about-me__text {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

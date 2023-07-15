@@ -1,0 +1,83 @@
+.cards-hobbies__container {
+  background-color: var(--dark-violet);
+  background-image: url(../assets/wave02.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-family: var(--nunito);
+  font-weight: 400;
+  color: var(--dark-violet);
+}
+
+.cards-hobbies__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 1rem 3rem 2.3rem 3rem;
+  height: 100%;
+  cursor: default;
+}
+
+.cards-hobbies__content h2.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--dark-pink);
+  font-weight: 700;
+  font-size: 1.525rem;
+  margin-block-start: 1em;
+  margin-block-start: 1em;
+}
+
+.cards-hobbies__content .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 5%;
+}
+
+.cards-hobbies__content .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  height: 260px;
+  width: 260px;
+}
+
+.cards-hobbies__content .card:hover {
+  transform: scale(1.05);
+}
+
+.cards-hobbies__content .card img {
+  height: 50px;
+}
+
+.cards-hobbies__content .card__title {
+  line-height: 2.8;
+}
+
+@media screen  and (max-width: 768px) {
+  .cards-hobbies__content .card {
+    transform: scale(0.95);
+    width: 300px;
+  }
+
+  .cards-hobbies__content .cards-container {
+    padding-top: 3%;
+  }
+  .card:nth-child(8) img {
+    height: 48px;
+    width: 45px;
+  }
+}

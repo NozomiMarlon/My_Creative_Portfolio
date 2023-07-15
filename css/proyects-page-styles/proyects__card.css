@@ -1,0 +1,73 @@
+.proyects-card {
+  background: var(--dark-violet) url(../../assets/wave02.svg) bottom no-repeat;
+  font-family: var(--nunito);
+  color: var(--dark-violet);
+  font-weight: 700;
+  cursor: default;
+}
+
+.proyect-card__content {
+  background-color: var(--white); /* Fondo blanco para cada tarjeta de proyecto */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+  gap: 2.3rem;
+  border-radius: 20px; /* Agregar borde redondeado a la tarjeta */
+  box-shadow: 0 0 10px rgba(242, 78, 164, 0.1), 0 0 20px rgba(242, 78, 164, 0.2); /* Agregar sombra con tonos de rosado neon */
+  transition: box-shadow 0.3s ease-in-out; /* Transición suave al pasar el cursor sobre la tarjeta */
+  transform: scale(0.87);
+}
+
+.proyect-card__content:hover {
+  box-shadow: 0 0 20px rgba(242, 78, 164, 0.4), 0 0 40px rgba(242, 78, 164, 0.6); /* Cambiar la sombra al pasar el cursor */
+}
+
+/* Estilos para la imagen del proyecto */
+.proyect-card__img {
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover; /* Ajustar la imagen sin deformarla */
+}
+
+/* Estilos para el texto de la tarjeta */
+.proyect-card__texts {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+/* Agregar separación entre las tarjetas */
+.proyect-card__content + .proyect-card__content {
+  margin-top: 20px;
+}
+
+/* Responsive*/
+
+@media (max-width: 768px) {
+  .proyect-card__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .proyect-card__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 365px) {
+  .proyect-card__texts {
+    line-height: 1.595rem;
+  }
+
+  .proyect-card__content + .proyect-card__content {
+    margin-top: 0;
+  }
+}

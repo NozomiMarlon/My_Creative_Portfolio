@@ -1,0 +1,64 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-violet);
+  background-image: url(../assets/wave02.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 3rem 5rem 3rem;
+  height: 100%;
+  cursor: default;
+}
+
+.banner__title {
+  font-family: var(--nunito);
+  color: var(--dark-pink);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.banner__text {
+  font-family: var(--nunito);
+  font-size: 1.156rem;
+  font-weight: 500;
+  padding: 3% 5% 5% 5%;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+.banner__neon-button{
+  padding: 0.75rem 1.5rem;
+  color: var(--white);
+  font-family: var(--nunito);
+  font-size: 1.156rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+.banner__neon-button::after, .banner__neon-button::before{
+  border: 3px solid #dd33aa;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: transform 0.3s ease-in;
+}
+
+.banner__neon-button:hover::after{
+  transform: translate(-5px, -5px);
+}
+
+.banner__neon-button:hover::before{
+  transform: translate(5px, 5px);
+}

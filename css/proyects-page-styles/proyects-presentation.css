@@ -1,0 +1,80 @@
+.presentation__container {
+  background: var(--dark-violet);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+  padding-top: 2.5rem;
+}
+
+.presentation__card {
+  width: 88%;
+  height: 90%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation__card::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 500%;
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  animation: rotate 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.presentation__card::after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 90%;
+  border-radius: 10px;
+  background-color: var(--dark-violet);
+}
+
+.presentation__title {
+  width: 85%;
+  height: auto;
+  font-family: var(--nunito);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  padding: 1rem 0.1rem;
+  text-align: justify;
+  z-index: 2;
+}
+
+@media screen and (max-width:768px) {
+  .presentation__card::before {
+    display: none;
+  }
+
+  .presentation__card::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .presentation__title{
+    text-align: center;
+  }
+
+  .presentation__card {
+    margin-top: 0;
+  }
+}
